@@ -15,6 +15,7 @@
     "@stripe/react-stripe-js": "^1.4.1",
     "@stripe/stripe-js": "^1.16.0",
     "aos": "^2.3.4",
+    "axios": "^0.26.1",
     "classnames": "^2.3.1",
     "emoji-mart": "^3.0.1",
     "js-cookie": "^3.0.1",

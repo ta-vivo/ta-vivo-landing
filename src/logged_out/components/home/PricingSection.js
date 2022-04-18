@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 import { Grid, Typography } from "@mui/material";
 import { withStyles } from "@mui/styles";
@@ -6,6 +6,7 @@ import PriceCard from "./PriceCard";
 import calculateSpacing from "./calculateSpacing";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import useWidth from "../../../shared/functions/useWidth";
+import axios from "axios";
 
 const styles = (theme) => ({
   containerFix: {
@@ -45,6 +46,16 @@ function PricingSection(props) {
   const { classes, theme } = props;
   const width = useWidth();
   const isWidthUpMd = useMediaQuery(theme.breakpoints.up("md"));
+
+  
+  const [plans, setPlans] = useState([]);
+  
+  if ( plans.length == 0) {
+    axios.get("http://localhost:5000/api/pricing").then((response) => {
+      setPlans(response.data.data);
+    });
+  }
+
   return (
     <div className="lg-p-top" style={{ backgroundColor: "#FFFFFF" }}>
       <Typography variant="h3" align="center" className="lg-mg-bottom">
@@ -56,86 +67,27 @@ function PricingSection(props) {
           spacing={calculateSpacing(width, theme)}
           className={classes.gridContainer}
         >
-          <Grid
-            item
-            xs={12}
-            sm={6}
-            lg={3}
-            className={classes.cardWrapper}
-            data-aos="zoom-in-up"
-          >
-            <PriceCard
-              title="Starter"
-              pricing={
-                <span>
-                  $14.99
-                  <Typography display="inline"> / month</Typography>
-                </span>
-              }
-              features={["Feature 1", "Feature 2", "Feature 3"]}
-            />
-          </Grid>
-          <Grid
-            item
-            className={classes.cardWrapperHighlighted}
-            xs={12}
-            sm={6}
-            lg={3}
-            data-aos="zoom-in-up"
-            data-aos-delay="200"
-          >
-            <PriceCard
-              highlighted
-              title="Premium"
-              pricing={
-                <span>
-                  $29.99
-                  <Typography display="inline"> / month</Typography>
-                </span>
-              }
-              features={["Feature 1", "Feature 2", "Feature 3"]}
-            />
-          </Grid>
-          <Grid
-            item
-            className={classes.cardWrapper}
-            xs={12}
-            sm={6}
-            lg={3}
-            data-aos="zoom-in-up"
-            data-aos-delay={isWidthUpMd ? "400" : "0"}
-          >
-            <PriceCard
-              title="Business"
-              pricing={
-                <span>
-                  $49.99
-                  <Typography display="inline"> / month</Typography>
-                </span>
-              }
-              features={["Feature 1", "Feature 2", "Feature 3"]}
-            />
-          </Grid>
-          <Grid
-            item
-            className={classes.cardWrapper}
-            xs={12}
-            sm={6}
-            lg={3}
-            data-aos="zoom-in-up"
-            data-aos-delay={isWidthUpMd ? "600" : "200"}
-          >
-            <PriceCard
-              title="Tycoon"
-              pricing={
-                <span>
-                  $99.99
-                  <Typography display="inline"> / month</Typography>
-                </span>
-              }
-              features={["Feature 1", "Feature 2", "Feature 3"]}
-            />
-          </Grid>
+          {plans.map((plan) => (
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              lg={3}
+              className={classes.cardWrapper}
+              data-aos="zoom-in-up"
+            >
+              <PriceCard
+                title={plan.name}
+                pricing={
+                  <span>
+                    ${plan.price}
+                    <Typography display="inline"> / month</Typography>
+                  </span>
+                }
+                features={[]}
+              />
+            </Grid>
+          ))}
         </Grid>
       </div>
     </div>
