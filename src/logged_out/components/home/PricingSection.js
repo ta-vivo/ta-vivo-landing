@@ -84,7 +84,9 @@ function PricingSection(props) {
                     <Typography display="inline"> / month</Typography>
                   </span>
                 }
-                features={[]}
+                features={plan.features.map((feature) => (
+                  feature.quantity  + ' ' + feature.item
+                ))}
               />
             </Grid>
           ))}
