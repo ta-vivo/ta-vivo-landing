@@ -7,6 +7,7 @@ import calculateSpacing from "./calculateSpacing";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import useWidth from "../../../shared/functions/useWidth";
 import axios from "axios";
+import { useTranslation } from  '../../../shared/i18n/i18n'
 
 const styles = (theme) => ({
   containerFix: {
@@ -46,7 +47,7 @@ function PricingSection(props) {
   const { classes, theme } = props;
   const width = useWidth();
   const isWidthUpMd = useMediaQuery(theme.breakpoints.up("md"));
-
+  const { t } = useTranslation();
   
   const [plans, setPlans] = useState([]);
   
@@ -59,7 +60,7 @@ function PricingSection(props) {
   return (
     <div className="lg-p-top" style={{ backgroundColor: "#FFFFFF" }}>
       <Typography variant="h3" align="center" className="lg-mg-bottom">
-        Pricing
+        {t('titles.Pricing')}
       </Typography>
       <div className={classNames("container-fluid", classes.containerFix)}>
         <Grid
@@ -72,7 +73,7 @@ function PricingSection(props) {
               item
               xs={12}
               sm={6}
-              lg={3}
+              lg={6}
               className={classes.cardWrapper}
               data-aos="zoom-in-up"
             >
@@ -81,11 +82,11 @@ function PricingSection(props) {
                 pricing={
                   <span>
                     ${plan.price}
-                    <Typography display="inline"> / month</Typography>
+                    <Typography display="inline"> / {t('common.monthText')}</Typography>
                   </span>
                 }
                 features={plan.features.map((feature) => (
-                  feature.quantity  + ' ' + feature.item
+                  feature.quantity  + ' ' + t(`common.${feature.item}`)
                 ))}
               />
             </Grid>
