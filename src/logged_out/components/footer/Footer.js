@@ -4,8 +4,7 @@ import {
   Grid,
   Typography,
   Box,
-  IconButton,
-  Hidden
+  IconButton
 } from "@mui/material";
 import withStyles from "@mui/styles/withStyles";
 import PhoneIcon from "@mui/icons-material/Phone";
@@ -114,40 +113,38 @@ function Footer(props) {
       />
       <div className={classes.footerInner}>
         <Grid container spacing={isWidthUpMd ? 10 : 5}>
-          <Grid item xs={12} md={6} lg={4}>
+          <Grid item xs={12} md={4} lg={4}>
           </Grid>
-          <Hidden lgDown>
-            <Grid item xs={12} md={6} lg={4}>
-              <Box display="flex" justifyContent="center">
-                <div>
-                  {infos.map((info, index) => (
-                    <Box display="flex" mb={1} key={index}>
-                      <Box mr={2}>
-                        <IconButton
-                          className={classes.infoIcon}
-                          tabIndex={-1}
-                          disabled
-                          size="large"
-                        >
-                          {info.icon}
-                        </IconButton>
-                      </Box>
-                      <Box
-                        display="flex"
-                        flexDirection="column"
-                        justifyContent="center"
+          <Grid item xs={12} md={4} lg={4}>
+            <Box display="flex" justifyContent="center">
+              <div>
+                {infos.map((info, index) => (
+                  <Box display="flex" mb={1} key={index}>
+                    <Box mr={2}>
+                      <IconButton
+                        className={classes.infoIcon}
+                        tabIndex={-1}
+                        disabled
+                        size="large"
                       >
-                        <Typography variant="h6" className="text-white">
-                          {info.description}
-                        </Typography>
-                      </Box>
+                        {info.icon}
+                      </IconButton>
                     </Box>
-                  ))}
-                </div>
-              </Box>
-            </Grid>
-          </Hidden>
-          <Grid item xs={12} md={6} lg={4}>
+                    <Box
+                      display="flex"
+                      flexDirection="column"
+                      justifyContent="center"
+                    >
+                      <Typography variant="h6" className="text-white">
+                        {info.description}
+                      </Typography>
+                    </Box>
+                  </Box>
+                ))}
+              </div>
+            </Box>
+          </Grid>
+          <Grid item xs={12} md={4} lg={4}>
             <Typography variant="h6" paragraph className="text-white">
               About the Company
             </Typography>
