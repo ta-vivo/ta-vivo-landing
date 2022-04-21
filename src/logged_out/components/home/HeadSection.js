@@ -1,11 +1,12 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { Grid, Typography, Card, Hidden, Box } from "@mui/material";
+import { Grid, Typography, Card, Hidden, Box, Button } from "@mui/material";
 import withStyles from "@mui/styles/withStyles";
 import WaveBorder from "../../../shared/components/WaveBorder";
 import ZoomImage from "../../../shared/components/ZoomImage";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import '../../../styles/main.css';
 
 const styles = (theme) => ({
   extraLargeButtonLabel: {
@@ -114,15 +115,26 @@ function HeadSection(props) {
                       height="100%"
                     >
                       <Box mb={4}>
-                        <Typography variant={isWidthUpLg ? "h3" : "h4"}>
-                          Ta-vivo
+                        <Typography style={{ fontWeight: 'bold' }} variant={isWidthUpLg ? "h3" : "h4"}>
+                          <span style={{ color: '#0D7EEC' }}>Check</span> if you API or web is down made easy
                         </Typography>
-                        <Typography
-                            variant={isWidthUpLg ? "h6" : "body1"}
-                            color="textSecondary"
-                          >
-                            A better way to manage your deploys.
+                        <h3>Get notified on downtime</h3>
+                        <div className="integrations-logo-container">
+                          <img width={50} src={`${process.env.PUBLIC_URL}/images/discord.png`} alt="discord logo" />
+                          <img width={50} src={`${process.env.PUBLIC_URL}/images/email.png`} alt="email logo" />
+                          <img width={50} src={`${process.env.PUBLIC_URL}/images/slack.png`} alt="slack logo" />
+                          <img width={50} src={`${process.env.PUBLIC_URL}/images/telegram.png`} alt="telegram logo" />
+                        </div>
+                        <div style={{ marginTop: 30, marginBottom: 20 }}>
+                          <Button color="primary" variant="contained" href="https://app-tavivo.albert.do">
+                            Start monitoring for free
+                          </Button>
+                        </div>
+                        <div>
+                          <Typography variant="body1" color="textSecondary">
+                            No credit card required!
                           </Typography>
+                        </div>
                       </Box>
                     </Box>
                   </Grid>
