@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import classNames from "classnames";
 import { Grid, Typography } from "@mui/material";
 import { withStyles } from "@mui/styles";
 import PriceCard from "./PriceCard";
 import calculateSpacing from "./calculateSpacing";
-import useMediaQuery from "@mui/material/useMediaQuery";
 import useWidth from "../../../shared/functions/useWidth";
 import axios from "axios";
-import { useTranslation } from  '../../../shared/i18n/i18n'
+import { useTranslation } from '../../../shared/i18n/i18n'
 
 const styles = (theme) => ({
   containerFix: {
@@ -46,15 +45,15 @@ const styles = (theme) => ({
 function PricingSection(props) {
   const { classes, theme } = props;
   const width = useWidth();
-  const isWidthUpMd = useMediaQuery(theme.breakpoints.up("md"));
   const { t } = useTranslation();
-  
+
   const [plans, setPlans] = useState([]);
-  
-  if ( plans.length == 0) {
-    axios.get(`${process.env.REACT_APP_API}/pricing`).then((response) => {
-      setPlans(response.data.data);
-    });
+
+  if (plans.length === 0) {
+    axios.get(`${process.env.REACT_APP_API}/pricing`)
+      .then((response) => {
+        setPlans(response.data.data);
+      });
   }
 
   return (
@@ -86,7 +85,7 @@ function PricingSection(props) {
                   </span>
                 }
                 features={plan.features.map((feature) => (
-                  feature.quantity  + ' ' + t(`common.${feature.item}`)
+                  feature.quantity + ' ' + t(`common.${feature.item}`)
                 ))}
               />
             </Grid>
