@@ -32,7 +32,7 @@ function Main(props) {
   const selectHome = useCallback(() => {
     smoothScrollTop();
     document.title =
-      "Ta-vivo - Healthcheck made easy";
+      "Ta-vivo - Check if you API or web is down made easy";
     setSelectedTab("Home");
   }, [setSelectedTab]);
 
