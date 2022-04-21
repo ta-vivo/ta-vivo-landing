@@ -11,9 +11,6 @@ import {
 import withStyles from "@mui/styles/withStyles";
 import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
-import HowToRegIcon from "@mui/icons-material/HowToReg";
-import LockOpenIcon from "@mui/icons-material/LockOpen";
-import BookIcon from "@mui/icons-material/Book";
 import NavigationDrawer from "../../../shared/components/NavigationDrawer";
 import ZoomImage from "../../../shared/components/ZoomImage";
 
@@ -42,8 +39,6 @@ const styles = (theme) => ({
 function NavBar(props) {
   const {
     classes,
-    openRegisterDialog,
-    openLoginDialog,
     handleMobileDrawerOpen,
     handleMobileDrawerClose,
     mobileDrawerOpen,
@@ -54,22 +49,7 @@ function NavBar(props) {
       link: "/",
       name: "Home",
       icon: <HomeIcon className="text-white" />,
-    },
-    {
-      link: "/blog",
-      name: "Blog",
-      icon: <BookIcon className="text-white" />,
-    },
-    {
-      name: "Register",
-      onClick: openRegisterDialog,
-      icon: <HowToRegIcon className="text-white" />,
-    },
-    {
-      name: "Login",
-      onClick: openLoginDialog,
-      icon: <LockOpenIcon className="text-white" />,
-    },
+    }
   ];
   return (
     <div className={classes.root}>
