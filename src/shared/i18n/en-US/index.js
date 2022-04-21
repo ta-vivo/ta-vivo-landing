@@ -12,6 +12,7 @@ export default {
         titles: {
             "Pricing": "Pricing",
             "Features": "Features",
+            "customers": "Customers",
         }
 
     },

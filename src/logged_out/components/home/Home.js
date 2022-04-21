@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import HeadSection from "./HeadSection";
 import FeatureSection from "./FeatureSection";
 import PricingSection from "./PricingSection";
+import CustomersSection from './CustomersSection';
 
 function Home(props) {
   const { selectHome } = props;
@@ -14,6 +15,7 @@ function Home(props) {
       <HeadSection />
       <FeatureSection />
       <PricingSection />
+      <CustomersSection />
     </Fragment>
   );
 }
