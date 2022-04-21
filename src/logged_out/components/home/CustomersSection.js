@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import classNames from "classnames";
 import { Grid, Typography } from "@mui/material";
 import { withStyles } from "@mui/styles";
-import PriceCard from "./PriceCard";
 import calculateSpacing from "./calculateSpacing";
 import useWidth from "../../../shared/functions/useWidth";
 import axios from "axios";
@@ -59,7 +58,7 @@ function PricingSection(props) {
   return (
     <div className="lg-p-top" style={{ backgroundColor: "#FFFFFF" }}>
       <Typography variant="h3" align="center" className="lg-mg-bottom">
-        {t('titles.Pricing')}
+        {t('titles.customers')}
       </Typography>
       <div className={classNames("container-fluid", classes.containerFix)}>
         <Grid
@@ -67,30 +66,6 @@ function PricingSection(props) {
           spacing={calculateSpacing(width, theme)}
           className={classes.gridContainer}
         >
-          {plans.map((plan) => (
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              lg={6}
-              className={classes.cardWrapper}
-              data-aos="zoom-in-up"
-              key={plan.id}
-            >
-              <PriceCard
-                title={plan.name}
-                pricing={
-                  <span>
-                    ${plan.price}
-                    <Typography display="inline"> / {t('common.monthText')}</Typography>
-                  </span>
-                }
-                features={plan.features.map((feature) => (
-                  feature.quantity + ' ' + t(`common.${feature.item}`)
-                ))}
-              />
-            </Grid>
-          ))}
         </Grid>
       </div>
     </div>

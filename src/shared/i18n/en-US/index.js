@@ -1,18 +1,21 @@
 export default {
     translation: {
         common: {
-        "monthText" : "month",
-        "checksIntervalUpTo1Minute" : "check interval",
-        "checksIntervalUpTo30Seconds" : "check interval",
-        "logsHistory" : "Log History",
-        "integrations" : "Integrations"
+            "checks": "Checks",
+            "monthText": "month",
+            "checksIntervalUpTo1Minute": "check interval",
+            "checksIntervalUpTo30Seconds": "check interval",
+            "logsHistory": "Log History",
+            "integrations": "Integrations",
+            "TimeInterval": "Time Interval",
         },
         titles: {
             "Pricing": "Pricing",
             "Features": "Features",
+            "customers": "Customers",
         }
-        
-     },
-     
-     
+
+    },
+
+
 }

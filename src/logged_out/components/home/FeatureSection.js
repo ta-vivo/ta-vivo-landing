@@ -1,14 +1,8 @@
 import React from "react";
 import { Grid, Typography } from "@mui/material";
-import CodeIcon from "@mui/icons-material/Code";
 import BuildIcon from "@mui/icons-material/Build";
-import ComputerIcon from "@mui/icons-material/Computer";
 import BarChartIcon from "@mui/icons-material/BarChart";
-import HeadsetMicIcon from "@mui/icons-material/HeadsetMic";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
-import CloudIcon from "@mui/icons-material/Cloud";
-import MeassageIcon from "@mui/icons-material/Message";
-import CancelIcon from "@mui/icons-material/Cancel";
 import calculateSpacing from "./calculateSpacing";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { withTheme } from "@mui/styles";
