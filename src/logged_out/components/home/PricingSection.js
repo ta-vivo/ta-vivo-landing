@@ -52,7 +52,7 @@ function PricingSection(props) {
   const [plans, setPlans] = useState([]);
   
   if ( plans.length == 0) {
-    axios.get("http://localhost:5000/api/pricing").then((response) => {
+    axios.get(`${process.env.REACT_APP_API}/pricing`).then((response) => {
       setPlans(response.data.data);
     });
   }
