@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 import { Grid, Typography } from "@mui/material";
 import { withStyles } from "@mui/styles";
@@ -46,18 +46,18 @@ function PricingSection(props) {
   const width = useWidth();
   const { t } = useTranslation();
 
-  const [plans, setPlans] = useState([]);
+  const [customers, setCustomers] = useState([]);
 
-  if (plans.length === 0) {
-    axios.get(`${process.env.REACT_APP_API}/pricing`)
+  useEffect(() => {
+    axios.get(`https://ta-vivo-customers.netlify.app/customers.json`)
       .then((response) => {
-        setPlans(response.data.data);
+        setCustomers(response.data);
       });
-  }
+  }, []);
 
   return (
     <div className="lg-p-top" style={{ backgroundColor: "#FFFFFF" }}>
-      <Typography variant="h3" align="center" className="lg-mg-bottom">
+      <Typography variant="h3" align="center" style={{paddingBottom: '30px'}}>
         {t('titles.customers')}
       </Typography>
       <div className={classNames("container-fluid", classes.containerFix)}>
@@ -65,10 +65,27 @@ function PricingSection(props) {
           container
           spacing={calculateSpacing(width, theme)}
           className={classes.gridContainer}
+          style={{textAlign: 'center'}}
         >
-        </Grid>
-      </div>
+          {customers.map((element) => (
+            <Grid
+              item
+              xs={6}
+              sm={2}
+              md={2}
+              lg={2}
+              data-aos="zoom-in-up"
+              key={element.name}
+            >
+              <div>
+                <img style={{ width: 80 }} src={element.logo} alt={element.name} />
+                <span style={{ display: 'block', color: 'rgb(161 161 161)'}} > { element.name }</span>
+            </div>
+            </Grid>
+          ))}
+      </Grid>
     </div>
+    </div >
   );
 }
 
