@@ -75,6 +75,7 @@ function PricingSection(props) {
               lg={6}
               className={classes.cardWrapper}
               data-aos="zoom-in-up"
+              key={plan.id}
             >
               <PriceCard
                 title={plan.name}
