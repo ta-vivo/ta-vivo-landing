@@ -4,7 +4,6 @@ import classNames from "classnames";
 import { Grid, Typography, Card, Hidden, Box, Button } from "@mui/material";
 import withStyles from "@mui/styles/withStyles";
 import WaveBorder from "../../../shared/components/WaveBorder";
-import ZoomImage from "../../../shared/components/ZoomImage";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import '../../../styles/main.css';
 
@@ -126,12 +125,12 @@ function HeadSection(props) {
                           <img width={50} src={`${process.env.PUBLIC_URL}/images/telegram.png`} alt="telegram logo" />
                         </div>
                         <div style={{ marginTop: 30, marginBottom: 20 }}>
-                          <Button color="primary" variant="contained" href="https://app-tavivo.albert.do">
+                          <Button color="primary" variant="contained" href="https://app-tavivo.albert.do" style={{ textTransform: 'initial' }}>
                             Start monitoring for free
                           </Button>
                         </div>
                         <div>
-                          <Typography variant="body1" color="textSecondary">
+                          <Typography variant="body1" color="textSecondary" style={{ fontStyle: 'italic' }}>
                             No credit card required!
                           </Typography>
                         </div>
@@ -139,10 +138,21 @@ function HeadSection(props) {
                     </Box>
                   </Grid>
                   <Hidden mdDown>
-                    <Grid item md={6}>
-                      <ZoomImage
-                        src={`${process.env.PUBLIC_URL}/images/logged_out/mockup.png`}
-                        className={classes.image}
+                    <Grid item md={6} style={{ position: 'relative' }}>
+                      <Typography variant="body1" color="textSecondary">
+                        Checks
+                      </Typography>
+                      <img
+                        src={`${process.env.PUBLIC_URL}/images/demo/1.png`}
+                        style={{ maxWidth: 400, borderRadius: 10 }}
+                        alt="header example"
+                      />
+                      <Typography variant="body1" color="textSecondary">
+                        Integrations
+                      </Typography>
+                      <img
+                        src={`${process.env.PUBLIC_URL}/images/demo/2.png`}
+                        style={{ maxWidth: 400, borderRadius: 10 }}
                         alt="header example"
                       />
                     </Grid>

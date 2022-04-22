@@ -71,8 +71,8 @@ function PricingSection(props) {
             <Grid
               item
               xs={12}
-              sm={6}
-              lg={6}
+              sm={12}
+              lg={3}
               className={classes.cardWrapper}
               data-aos="zoom-in-up"
               key={plan.id}

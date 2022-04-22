@@ -49,6 +49,12 @@ function NavBar(props) {
       link: "/",
       name: "Home",
       icon: <HomeIcon className="text-white" />,
+    },
+    {
+      link: "https://app-tavivo.albert.do/auth/register",
+      name: "Register for FREE",
+      icon: <HomeIcon className="text-white" />,
+      isButton: true
     }
   ];
   return (
@@ -87,7 +93,9 @@ function NavBar(props) {
                       <Button
                         color="secondary"
                         size="large"
+                        variant={element.isButton ? "contained" : "text"}
                         classes={{ text: classes.menuButtonText }}
+                        style={{ textTransform: 'initial' }}
                       >
                         {element.name}
                       </Button>

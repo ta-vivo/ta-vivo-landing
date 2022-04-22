@@ -19,6 +19,7 @@ const features = [
     icon: <BuildIcon style={{ fontSize: iconSize }} />,
     mdDelay: "0",
     smDelay: "0",
+    img: `${process.env.PUBLIC_URL}/images/demo/easy-setup.png`,
   },
   {
     color: "#6200EA",
@@ -27,6 +28,7 @@ const features = [
     icon: <CalendarTodayIcon style={{ fontSize: iconSize }} />,
     mdDelay: "200",
     smDelay: "200",
+    img: `${process.env.PUBLIC_URL}/images/demo/integrations.png`,
   },
   {
     color: "#0091EA",
@@ -35,6 +37,7 @@ const features = [
     icon: <BarChartIcon style={{ fontSize: iconSize }} />,
     mdDelay: "400",
     smDelay: "0",
+    img: `${process.env.PUBLIC_URL}/images/demo/recent-logs.png`,
   }
 ];
 
@@ -66,6 +69,7 @@ function FeatureSection(props) {
                   headline={element.headline}
                   text={element.text}
                 />
+                <img style={{ borderRadius: 10, maxWidth: 300, marginTop: 20 }} src={element.img} alt="feature demo" />
               </Grid>
             ))}
           </Grid>
