@@ -4,7 +4,6 @@ import classNames from "classnames";
 import { Grid, Typography, Card, Hidden, Box, Button } from "@mui/material";
 import withStyles from "@mui/styles/withStyles";
 import WaveBorder from "../../../shared/components/WaveBorder";
-import ZoomImage from "../../../shared/components/ZoomImage";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import '../../../styles/main.css';
 
@@ -139,10 +138,21 @@ function HeadSection(props) {
                     </Box>
                   </Grid>
                   <Hidden mdDown>
-                    <Grid item md={6}>
-                      <ZoomImage
-                        src={`${process.env.PUBLIC_URL}/images/logged_out/mockup.png`}
-                        className={classes.image}
+                    <Grid item md={6} style={{position: 'relative'}}>
+                      <Typography variant="body1" color="textSecondary">
+                        Checks
+                      </Typography>
+                      <img
+                        src={`${process.env.PUBLIC_URL}/images/demo/1.png`}
+                        style={{maxWidth: 400, borderRadius: 10}}
+                        alt="header example"
+                      />
+                      <Typography variant="body1" color="textSecondary">
+                        Integrations
+                      </Typography>
+                      <img
+                        src={`${process.env.PUBLIC_URL}/images/demo/2.png`}
+                        style={{maxWidth: 400, borderRadius: 10}}
                         alt="header example"
                       />
                     </Grid>
