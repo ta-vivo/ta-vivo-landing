@@ -95,6 +95,7 @@ function NavBar(props) {
                         size="large"
                         variant={element.isButton ? "contained" : "text"}
                         classes={{ text: classes.menuButtonText }}
+                        style={{ textTransform: 'initial' }}
                       >
                         {element.name}
                       </Button>
