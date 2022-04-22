@@ -57,7 +57,7 @@ function FeatureSection(props) {
             {features.map((element) => (
               <Grid
                 item
-                xs={6}
+                xs={12}
                 md={4}
                 data-aos="zoom-in-up"
                 data-aos-delay={isWidthUpMd ? element.mdDelay : element.smDelay}
