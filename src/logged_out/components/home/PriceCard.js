@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Typography, Box } from "@mui/material";
+import { Typography, Box, Button } from "@mui/material";
 import withStyles from "@mui/styles/withStyles";
 import CheckIcon from "@mui/icons-material/Check";
 
@@ -12,7 +12,7 @@ const styles = (theme) => ({
     paddingRight: theme.spacing(4),
     marginTop: theme.spacing(2),
     border: `3px solid ${theme.palette.primary.dark}`,
-    borderRadius: theme.shape.borderRadius * 2,
+    borderRadius: theme.shape.borderRadius * 2
   },
   cardHightlighted: {
     paddingTop: theme.spacing(8),
@@ -32,7 +32,10 @@ const styles = (theme) => ({
 });
 
 function PriceCard(props) {
-  const { classes, theme, title, pricing, features, highlighted } = props;
+  const { classes, theme, title, pricing, features } = props;
+
+  const highlighted = title.toLowerCase() === 'pro';
+
   return (
     <div className={highlighted ? classes.cardHightlighted : classes.card}>
       <Box mb={2}>
@@ -70,6 +73,17 @@ function PriceCard(props) {
           </Box>
         </Box>
       ))}
+      <Box>
+        <Button color="primary" variant="contained" href="https://app-tavivo.albert.do"
+          style={{
+            textTransform: 'initial',
+            marginTop: 20,
+            backgroundColor: title.toLowerCase() === 'pro' ? 'white' : null,
+            color: title.toLowerCase() === 'pro' ? 'black' : null,
+          }}>
+          {title.toLowerCase() === 'basic' ? 'Register for FREE' : 'Subscribe now'}
+        </Button>
+      </Box>
     </div>
   );
 }
