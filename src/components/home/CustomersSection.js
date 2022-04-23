@@ -57,8 +57,8 @@ function PricingSection(props) {
 
   return (
     <div className="lg-p-top" style={{ backgroundColor: "#FFFFFF" }}>
-      <Typography variant="h3" align="center" style={{paddingBottom: '30px'}}>
-        {t('titles.customers')}
+      <Typography variant="h4" align="center" style={{paddingBottom: '30px'}}>
+        {t('common.trustedByTeamsWorldwide')}
       </Typography>
       <div className={classNames("container-fluid", classes.containerFix)}>
         <Grid
