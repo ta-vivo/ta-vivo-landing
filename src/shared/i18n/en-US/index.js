@@ -8,6 +8,7 @@ export default {
             "logsHistory": "Log History",
             "integrations": "Integrations",
             "TimeInterval": "Time Interval",
+            "trustedByTeamsWorldwide": "Trusted by teams worldwide"
         },
         titles: {
             "Pricing": "Pricing",
