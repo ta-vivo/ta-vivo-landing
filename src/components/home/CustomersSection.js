@@ -3,9 +3,9 @@ import classNames from "classnames";
 import { Grid, Typography } from "@mui/material";
 import { withStyles } from "@mui/styles";
 import calculateSpacing from "./calculateSpacing";
-import useWidth from "../../../shared/functions/useWidth";
+import useWidth from "../../shared/functions/useWidth";
 import axios from "axios";
-import { useTranslation } from '../../../shared/i18n/i18n'
+import { useTranslation } from '../../shared/i18n/i18n'
 
 const styles = (theme) => ({
   containerFix: {
@@ -57,8 +57,8 @@ function PricingSection(props) {
 
   return (
     <div className="lg-p-top" style={{ backgroundColor: "#FFFFFF" }}>
-      <Typography variant="h3" align="center" style={{paddingBottom: '30px'}}>
-        {t('titles.customers')}
+      <Typography variant="h4" align="center" style={{paddingBottom: '30px'}}>
+        {t('common.trustedByTeamsWorldwide')}
       </Typography>
       <div className={classNames("container-fluid", classes.containerFix)}>
         <Grid

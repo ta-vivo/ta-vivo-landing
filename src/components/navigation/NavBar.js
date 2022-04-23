@@ -11,8 +11,8 @@ import {
 import withStyles from "@mui/styles/withStyles";
 import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
-import NavigationDrawer from "../../../shared/components/NavigationDrawer";
-import ZoomImage from "../../../shared/components/ZoomImage";
+import NavigationDrawer from "../../shared/components/NavigationDrawer";
+import ZoomImage from "../../shared/components/ZoomImage";
 
 const styles = (theme) => ({
   appBar: {
@@ -51,9 +51,16 @@ function NavBar(props) {
       icon: <HomeIcon className="text-white" />,
     },
     {
+      link: "https://documentation-tavivo.albert.do/",
+      name: "Docs",
+      icon: <HomeIcon className="text-white" />,
+      isExternal: true,
+    },
+    {
       link: "https://app-tavivo.albert.do/auth/register",
       name: "Register for FREE",
       icon: <HomeIcon className="text-white" />,
+      isExternal: true,
       isButton: true
     }
   ];
@@ -81,25 +88,42 @@ function NavBar(props) {
               </IconButton>
             </Hidden>
             <Hidden mdDown>
-              {menuItems.map((element) => {
+              {menuItems.map((element, index) => {
                 if (element.link) {
                   return (
-                    <Link
-                      key={element.name}
-                      to={element.link}
-                      className={classes.noDecoration}
-                      onClick={handleMobileDrawerClose}
-                    >
-                      <Button
-                        color="secondary"
-                        size="large"
-                        variant={element.isButton ? "contained" : "text"}
-                        classes={{ text: classes.menuButtonText }}
-                        style={{ textTransform: 'initial' }}
-                      >
-                        {element.name}
-                      </Button>
-                    </Link>
+                    <span key={index}>
+                      {element.isExternal ?
+                        <Button
+                          key={index}
+                          color="secondary"
+                          size="large"
+                          variant={element.isButton ? "contained" : "text"}
+                          classes={{ text: classes.menuButtonText }}
+                          style={{ textTransform: 'initial' }}
+                          href={element.isExternal ? element.link : null}
+                        >
+                          {element.name}
+                        </Button>
+                        :
+                        <Link
+                          key={index}
+                          to={element.link}
+                          className={classes.noDecoration}
+                          onClick={handleMobileDrawerClose}
+                        >
+                          <Button
+                            color="secondary"
+                            size="large"
+                            variant={element.isButton ? "contained" : "text"}
+                            classes={{ text: classes.menuButtonText }}
+                            style={{ textTransform: 'initial' }}
+                            href={element.isExternal ? element.link : null}
+                          >
+                            {element.name}
+                          </Button>
+                        </Link>
+                      }
+                    </span>
                   );
                 }
                 return (
@@ -135,8 +159,6 @@ NavBar.propTypes = {
   handleMobileDrawerClose: PropTypes.func,
   mobileDrawerOpen: PropTypes.bool,
   selectedTab: PropTypes.string,
-  openRegisterDialog: PropTypes.func.isRequired,
-  openLoginDialog: PropTypes.func.isRequired,
 };
 
 export default withStyles(styles, { withTheme: true })(memo(NavBar));

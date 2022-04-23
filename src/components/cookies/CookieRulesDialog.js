@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Dialog, DialogTitle, DialogContent, DialogActions, Typography } from "@mui/material";
 import withStyles from '@mui/styles/withStyles';
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import ColoredButton from "../../../shared/components/ColoredButton";
+import ColoredButton from "../../shared/components/ColoredButton";
 
 const styles = theme => ({
   dialogActions: {

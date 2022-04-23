@@ -9,7 +9,7 @@ import {
 import withStyles from "@mui/styles/withStyles";
 import PhoneIcon from "@mui/icons-material/Phone";
 import MailIcon from "@mui/icons-material/Mail";
-import WaveBorder from "../../../shared/components/WaveBorder";
+import WaveBorder from "../../shared/components/WaveBorder";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 const styles = (theme) => ({
