@@ -4,9 +4,9 @@ import { Grid, Typography } from "@mui/material";
 import { withStyles } from "@mui/styles";
 import PriceCard from "./PriceCard";
 import calculateSpacing from "./calculateSpacing";
-import useWidth from "../../../shared/functions/useWidth";
+import useWidth from "../../shared/functions/useWidth";
 import axios from "axios";
-import { useTranslation } from '../../../shared/i18n/i18n'
+import { useTranslation } from '../../shared/i18n/i18n'
 
 const styles = (theme) => ({
   containerFix: {

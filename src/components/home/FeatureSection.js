@@ -7,7 +7,7 @@ import calculateSpacing from "./calculateSpacing";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { withTheme } from "@mui/styles";
 import FeatureCard from "./FeatureCard";
-import useWidth from "../../../shared/functions/useWidth";
+import useWidth from "../../shared/functions/useWidth";
 
 const iconSize = 30;
 

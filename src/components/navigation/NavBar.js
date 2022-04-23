@@ -11,8 +11,8 @@ import {
 import withStyles from "@mui/styles/withStyles";
 import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
-import NavigationDrawer from "../../../shared/components/NavigationDrawer";
-import ZoomImage from "../../../shared/components/ZoomImage";
+import NavigationDrawer from "../../shared/components/NavigationDrawer";
+import ZoomImage from "../../shared/components/ZoomImage";
 
 const styles = (theme) => ({
   appBar: {
@@ -135,8 +135,6 @@ NavBar.propTypes = {
   handleMobileDrawerClose: PropTypes.func,
   mobileDrawerOpen: PropTypes.bool,
   selectedTab: PropTypes.string,
-  openRegisterDialog: PropTypes.func.isRequired,
-  openLoginDialog: PropTypes.func.isRequired,
 };
 
 export default withStyles(styles, { withTheme: true })(memo(NavBar));
