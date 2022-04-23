@@ -4,13 +4,15 @@ import {
   Grid,
   Typography,
   Box,
-  IconButton
+  IconButton,
+  Link
 } from "@mui/material";
 import withStyles from "@mui/styles/withStyles";
 import PhoneIcon from "@mui/icons-material/Phone";
 import MailIcon from "@mui/icons-material/Mail";
 import WaveBorder from "../../shared/components/WaveBorder";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTranslation } from '../../shared/i18n/i18n'
 
 const styles = (theme) => ({
   footerInner: {
@@ -103,6 +105,9 @@ const socialIcons = [
 function Footer(props) {
   const { classes, theme } = props;
   const isWidthUpMd = useMediaQuery(theme.breakpoints.up("md"));
+  const { t } = useTranslation();
+  const termsAndConditionsLink = process.env.REACT_APP_TERMS_AND_CONDITIONS_URL;
+  const privacyPolicyLink = process.env.REACT_APP_PRIVACY_POLICY_URL;
 
   return (
     <footer className="lg-p-top">
@@ -114,6 +119,7 @@ function Footer(props) {
       <div className={classes.footerInner}>
         <Grid container spacing={isWidthUpMd ? 10 : 5}>
           <Grid item xs={12} md={4} lg={4}>
+
           </Grid>
           <Grid item xs={12} md={4} lg={4}>
             <Box display="flex" justifyContent="center">
@@ -152,6 +158,14 @@ function Footer(props) {
               From Dominican Republic to the world, a simple idea converts into
               a company that is a success.
             </Typography>
+            <div style={{ marginBottom: 20 }}>
+              <div>
+                <Link href={termsAndConditionsLink}>{t('common.termsAndConditions')}</Link>
+              </div>
+              <div>
+                <Link href={privacyPolicyLink}>{t('common.privacyPolicy')}</Link>
+              </div>
+            </div>
             <Box display="flex">
               {socialIcons.map((socialIcon, index) => (
                 <Box key={index} mr={index !== socialIcons.length - 1 ? 1 : 0}>

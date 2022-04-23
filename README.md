@@ -1,10 +1,5 @@
-# React SaaS Template
-Remains of a SaaS business I once tried to build. Now transformed into a template for building an SaaS/admin application using React + Material-UI.
+# Ta-vivo landing page
 
-[**Check out the demo**](https://reactsaastemplate.com)
-
-![Node.js CI](https://github.com/dunky11/react-saas-template/workflows/Node.js%20CI/badge.svg)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 [<img src="/.github/gifs/showcase.gif">](https://reactsaastemplate.com "Go to demo website")
 
@@ -15,32 +10,19 @@ Remains of a SaaS business I once tried to build. Now transformed into a templat
 
 #### Node.js 12+ (versions below could work, but are not tested)
 
-* Linux:
-
-   ```
-   sudo apt install nodejs npm
-   ```
-
-* Windows or macOS:
-
-   https://nodejs.org/en/
 
 ### Installing
 
 1. Clone the repository
 
-   ```
-   git clone https://github.com/dunky11/react-saas-template
-   ```
 2. Install dependencies, this can take a minute
 
-   ```
-   cd react-saas-template
+   ```bash
    npm install
    ```
 3. Start the local server
 
-   ```
+   ```bash
    npm start
    ```
 
@@ -75,7 +57,6 @@ It will create a folder named build with your compiled project inside. After tha
 * [Recharts](https://github.com/recharts/recharts) - Charting library I used for the statistics
 * [Aos](https://github.com/michalsnik/aos) - Animations based on viewport
 * [React-Cropper](https://github.com/roadmanfong/react-cropper) - Cropper for the image uploads
-* [React-Stripe-js](https://github.com/stripe/react-stripe-js) - Stripes payment elements
 
 ## Contribute
 Show your support by ⭐ the project. Pull requests are always welcome.
