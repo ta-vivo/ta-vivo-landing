@@ -51,9 +51,16 @@ function NavBar(props) {
       icon: <HomeIcon className="text-white" />,
     },
     {
+      link: "https://documentation-tavivo.albert.do/",
+      name: "Docs",
+      icon: <HomeIcon className="text-white" />,
+      isExternal: true,
+    },
+    {
       link: "https://app-tavivo.albert.do/auth/register",
       name: "Register for FREE",
       icon: <HomeIcon className="text-white" />,
+      isExternal: true,
       isButton: true
     }
   ];
@@ -81,25 +88,42 @@ function NavBar(props) {
               </IconButton>
             </Hidden>
             <Hidden mdDown>
-              {menuItems.map((element) => {
+              {menuItems.map((element, index) => {
                 if (element.link) {
                   return (
-                    <Link
-                      key={element.name}
-                      to={element.link}
-                      className={classes.noDecoration}
-                      onClick={handleMobileDrawerClose}
-                    >
-                      <Button
-                        color="secondary"
-                        size="large"
-                        variant={element.isButton ? "contained" : "text"}
-                        classes={{ text: classes.menuButtonText }}
-                        style={{ textTransform: 'initial' }}
-                      >
-                        {element.name}
-                      </Button>
-                    </Link>
+                    <span key={index}>
+                      {element.isExternal ?
+                        <Button
+                          key={index}
+                          color="secondary"
+                          size="large"
+                          variant={element.isButton ? "contained" : "text"}
+                          classes={{ text: classes.menuButtonText }}
+                          style={{ textTransform: 'initial' }}
+                          href={element.isExternal ? element.link : null}
+                        >
+                          {element.name}
+                        </Button>
+                        :
+                        <Link
+                          key={index}
+                          to={element.link}
+                          className={classes.noDecoration}
+                          onClick={handleMobileDrawerClose}
+                        >
+                          <Button
+                            color="secondary"
+                            size="large"
+                            variant={element.isButton ? "contained" : "text"}
+                            classes={{ text: classes.menuButtonText }}
+                            style={{ textTransform: 'initial' }}
+                            href={element.isExternal ? element.link : null}
+                          >
+                            {element.name}
+                          </Button>
+                        </Link>
+                      }
+                    </span>
                   );
                 }
                 return (
