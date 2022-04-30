@@ -11,6 +11,8 @@ import {
 import withStyles from "@mui/styles/withStyles";
 import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
+import ArticleIcon from '@mui/icons-material/Article';
+import MonitorHeartIcon from '@mui/icons-material/MonitorHeart';
 import NavigationDrawer from "../../shared/components/NavigationDrawer";
 import ZoomImage from "../../shared/components/ZoomImage";
 
@@ -53,13 +55,13 @@ function NavBar(props) {
     {
       link: "https://documentation-tavivo.albert.do/",
       name: "Docs",
-      icon: <HomeIcon className="text-white" />,
+      icon: <ArticleIcon className="text-white" />,
       isExternal: true,
     },
     {
       link: "https://app-tavivo.albert.do/auth/register",
       name: "Register for FREE",
-      icon: <HomeIcon className="text-white" />,
+      icon: <MonitorHeartIcon className="text-white" />,
       isExternal: true,
       isButton: true
     }
