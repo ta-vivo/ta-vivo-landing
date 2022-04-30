@@ -20,7 +20,7 @@ const styles = (theme) => ({
     marginRight: theme.spacing(0.5),
   },
   headSection: {
-    width: 200,
+    width: 300,
   },
   blackList: {
     backgroundColor: theme.palette.common.black,
