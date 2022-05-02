@@ -6,6 +6,7 @@ import calculateSpacing from "./calculateSpacing";
 import useWidth from "../../shared/functions/useWidth";
 import axios from "axios";
 import { useTranslation } from '../../shared/i18n/i18n'
+import '../../styles/main.css'
 
 const styles = (theme) => ({
   containerFix: {
@@ -70,16 +71,16 @@ function PricingSection(props) {
           {customers.map((element) => (
             <Grid
               item
-              xs={6}
-              sm={2}
-              md={2}
-              lg={2}
+              xs={3}
+              sm={3}
+              md={3}
+              lg={3}
               data-aos="zoom-in-up"
               key={element.name}
             >
-              <div>
-                <img style={{ width: 80 }} src={element.logo} alt={element.name} />
-                <span style={{ display: 'block', color: 'rgb(161 161 161)'}} > { element.name }</span>
+            <div className="shine" style={{'justify-content': 'center'}}>
+                <img className="customerlogo" style={{ width: 80,height:80}} src={element.logo} alt={element.name} />
+                <p style={{'font-weight': 'lighter'}}>{element.name}</p>
             </div>
             </Grid>
           ))}
