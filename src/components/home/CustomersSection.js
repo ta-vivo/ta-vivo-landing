@@ -71,7 +71,7 @@ function PricingSection(props) {
           {customers.map((element) => (
             <Grid
               item
-              xs={3}
+              xs={6}
               sm={3}
               md={3}
               lg={3}
