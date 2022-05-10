@@ -15,7 +15,7 @@
     "axios": "^0.27.2",
     "classnames": "^2.3.1",
     "emoji-mart": "^3.0.1",
-    "i18next": "^21.6.16",
+    "i18next": "^21.8.0",
     "js-cookie": "^3.0.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
