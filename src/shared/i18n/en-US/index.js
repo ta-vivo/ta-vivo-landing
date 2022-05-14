@@ -11,6 +11,7 @@ export default {
             "trustedByTeamsWorldwide": "Trusted by teams worldwide",
             "termsAndConditions": "Terms and Conditions",
             "privacyPolicy": "Privacy Policy",
+            "retryOnCheckFail": "Retry on check fail",
         },
         titles: {
             "Pricing": "Pricing",

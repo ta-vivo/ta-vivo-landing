@@ -86,7 +86,7 @@ function PricingSection(props) {
                   </span>
                 }
                 features={plan.features.map((feature) => (
-                  feature.quantity + ' ' + t(`common.${feature.item}`)
+                  (feature.quantity || '') + ' ' + t(`common.${feature.item}`)
                 ))}
               />
             </Grid>

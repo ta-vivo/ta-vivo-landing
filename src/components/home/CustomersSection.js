@@ -78,9 +78,9 @@ function PricingSection(props) {
               data-aos="zoom-in-up"
               key={element.name}
             >
-            <div className="shine" style={{'justify-content': 'center'}}>
+            <div className="shine" style={{'justifyContent': 'center'}}>
                 <img className="customerlogo" style={{ width: 80,height:80}} src={element.logo} alt={element.name} />
-                <p style={{'font-weight': 'lighter'}}>{element.name}</p>
+                <p style={{'fontWeight': 'lighter'}}>{element.name}</p>
             </div>
             </Grid>
           ))}
