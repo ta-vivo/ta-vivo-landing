@@ -5,7 +5,7 @@
   "homepage": "",
   "description": "Template for building an SaaS/admin application using React + Material-UI",
   "dependencies": {
-    "@emotion/react": "^11.9.0",
+    "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.9.3",
     "@mui/icons-material": "^5.8.4",
     "@mui/lab": "^5.0.0-alpha.84",
