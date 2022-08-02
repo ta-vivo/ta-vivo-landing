@@ -123,6 +123,7 @@ function HeadSection(props) {
                           <img width={50} src={`${process.env.PUBLIC_URL}/images/email.png`} alt="email logo" />
                           <img width={50} src={`${process.env.PUBLIC_URL}/images/slack.png`} alt="slack logo" />
                           <img width={50} src={`${process.env.PUBLIC_URL}/images/telegram.png`} alt="telegram logo" />
+                          <img width={50} src={`${process.env.PUBLIC_URL}/images/whatsapp.png`} alt="whatsapp logo" />
                         </div>
                         <div style={{ marginTop: 30, marginBottom: 20 }}>
                           <Button color="primary" variant="contained" href="https://app-tavivo.albert.do" style={{ textTransform: 'initial' }}>

@@ -15,7 +15,7 @@ const features = [
   {
     color: "#00C853",
     headline: "Easy Setup",
-    text: "Put your web app link and it's all!",
+    text: "Put your web app link and it's all, also you can use a custom Timezone.",
     icon: <BuildIcon style={{ fontSize: iconSize }} />,
     mdDelay: "0",
     smDelay: "0",
@@ -24,7 +24,7 @@ const features = [
   {
     color: "#6200EA",
     headline: "Link multiple notifiactions methods",
-    text: "Email, Slack, Telegram and more…",
+    text: "Discord, Email, Slack, Telegram and WhatsApp.",
     icon: <CalendarTodayIcon style={{ fontSize: iconSize }} />,
     mdDelay: "200",
     smDelay: "200",
