@@ -53,13 +53,13 @@ function NavBar(props) {
       icon: <HomeIcon className="text-white" />,
     },
     {
-      link: "https://documentation-tavivo.albert.do/",
+      link: "https://documentation.tavivo.do/",
       name: "Docs",
       icon: <ArticleIcon className="text-white" />,
       isExternal: true,
     },
     {
-      link: "https://app-tavivo.albert.do/auth/register",
+      link: "https://tavivo.do/auth/register",
       name: "Register for FREE",
       icon: <MonitorHeartIcon className="text-white" />,
       isExternal: true,

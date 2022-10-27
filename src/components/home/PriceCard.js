@@ -74,7 +74,7 @@ function PriceCard(props) {
         </Box>
       ))}
       <Box>
-        <Button color="primary" variant="contained" href="https://app-tavivo.albert.do"
+        <Button color="primary" variant="contained" href="https://tavivo.do"
           style={{
             textTransform: 'initial',
             marginTop: 20,
