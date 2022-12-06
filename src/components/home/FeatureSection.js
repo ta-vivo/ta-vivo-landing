@@ -15,7 +15,7 @@ const features = [
   {
     color: "#00C853",
     headline: "Easy Setup",
-    text: "Put your web app link and it's all, also you can use a custom Timezone.",
+    text: "Put your web app link and it's all, also you can use a custom Timezone. You can also configure header authentication as a JWT or custom token.",
     icon: <BuildIcon style={{ fontSize: iconSize }} />,
     mdDelay: "0",
     smDelay: "0",
