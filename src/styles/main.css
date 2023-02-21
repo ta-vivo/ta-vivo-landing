@@ -1,11 +1,12 @@
-.integrations-logo-container img{
-  margin-right: 10px;
+.integrations-logo-container img {
+	margin-right: 10px;
 }
 
 .shine {
 	position: relative;
 	overflow: hidden;
 }
+
 .shine::before {
 	background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
 	content: "";
@@ -18,32 +19,37 @@
 	width: 50%;
 	z-index: 2;
 }
+
 .shine:hover::before, .shine:focus::before {
 	animation: shine 0.85s;
 }
 
 .customerlogo:hover {
 	animation: scaleLogo 0.2s;
-	
+
 }
 
 @keyframes shine {
 	100% {
 		left: 125%;
-   }
+	}
 }
 
 @keyframes scaleLogo {
 	0% {
 		transform: scale(1);
-   }
+	}
 
-   50% {
-	transform: scale(1.1);
-   }
+	50% {
+		transform: scale(1.1);
+	}
 
-   100% {
-	transform: scale(1);
-   }
+	100% {
+		transform: scale(1);
+	}
 }
 
+a.MuiButton-root {
+	box-shadow: none !important;
+	border-radius: 6px;
+}
