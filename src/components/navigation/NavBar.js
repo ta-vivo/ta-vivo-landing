@@ -11,14 +11,13 @@ import {
 import withStyles from "@mui/styles/withStyles";
 import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
-import ArticleIcon from '@mui/icons-material/Article';
 import MonitorHeartIcon from '@mui/icons-material/MonitorHeart';
 import NavigationDrawer from "../../shared/components/NavigationDrawer";
 import ZoomImage from "../../shared/components/ZoomImage";
 
 const styles = (theme) => ({
   appBar: {
-    boxShadow: theme.shadows[6],
+    boxShadow: theme.shadows[0],
     backgroundColor: theme.palette.common.white,
   },
   toolbar: {
@@ -51,12 +50,6 @@ function NavBar(props) {
       link: "/",
       name: "Home",
       icon: <HomeIcon className="text-white" />,
-    },
-    {
-      link: "https://documentation.tavivo.do/",
-      name: "Docs",
-      icon: <ArticleIcon className="text-white" />,
-      isExternal: true,
     },
     {
       link: "https://tavivo.do/auth/register",
