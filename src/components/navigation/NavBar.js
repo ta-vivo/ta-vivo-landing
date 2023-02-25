@@ -1,6 +1,5 @@
 import React, { memo } from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 import {
   AppBar,
   Toolbar,
@@ -38,6 +37,14 @@ const styles = (theme) => ({
 });
 
 function NavBar(props) {
+  const handleOnClickInternalLink = (link) => {
+    const element = document.querySelector(link);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+
   const {
     classes,
     handleMobileDrawerOpen,
@@ -47,8 +54,18 @@ function NavBar(props) {
   } = props;
   const menuItems = [
     {
-      link: "/",
+      link: "#home",
       name: "Home",
+      icon: <HomeIcon className="text-white" />,
+    },
+    {
+      link: "#features",
+      name: "Features",
+      icon: <HomeIcon className="text-white" />,
+    },
+    {
+      link: "#pricing",
+      name: "Pricing",
       icon: <HomeIcon className="text-white" />,
     },
     {
@@ -100,23 +117,17 @@ function NavBar(props) {
                           {element.name}
                         </Button>
                         :
-                        <Link
-                          key={index}
-                          to={element.link}
-                          className={classes.noDecoration}
-                          onClick={handleMobileDrawerClose}
+                        <Button
+                          onClick={()=>handleOnClickInternalLink(element.link)}
+                          color="secondary"
+                          size="large"
+                          variant={element.isButton ? "contained" : "text"}
+                          classes={{ text: classes.menuButtonText }}
+                          style={{ textTransform: 'initial' }}
+                          href={element.isExternal ? element.link : null}
                         >
-                          <Button
-                            color="secondary"
-                            size="large"
-                            variant={element.isButton ? "contained" : "text"}
-                            classes={{ text: classes.menuButtonText }}
-                            style={{ textTransform: 'initial' }}
-                            href={element.isExternal ? element.link : null}
-                          >
-                            {element.name}
-                          </Button>
-                        </Link>
+                          {element.name}
+                        </Button>
                       }
                     </span>
                   );
