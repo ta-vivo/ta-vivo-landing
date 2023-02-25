@@ -47,7 +47,7 @@ function FeatureSection(props) {
   const isWidthUpMd = useMediaQuery(theme.breakpoints.up("md"));
 
   return (
-    <div style={{ backgroundColor: "#FFFFFF" }}>
+    <div id="features" style={{ backgroundColor: "#FFFFFF" }}>
       <div className="container-fluid lg-p-top">
         <Typography variant="h3" align="center" className="lg-mg-bottom">
           Features

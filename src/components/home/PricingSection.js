@@ -57,7 +57,7 @@ function PricingSection(props) {
   }
 
   return (
-    <div className="lg-p-top" style={{ backgroundColor: "#FFFFFF" }}>
+    <div id="pricing" className="lg-p-top" style={{ backgroundColor: "#FFFFFF" }}>
       <Typography variant="h3" align="center" className="lg-mg-bottom">
         {t('titles.Pricing')}
       </Typography>

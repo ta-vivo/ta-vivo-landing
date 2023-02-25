@@ -96,7 +96,7 @@ function HeadSection(props) {
 
   return (
     <Fragment>
-      <div className={classNames("lg-p-top", classes.wrapper)}>
+      <div id="home" className={classNames("lg-p-top", classes.wrapper)}>
         <div className={classNames("container-fluid", classes.container)}>
           <Box display="flex" justifyContent="center" className="row">
             <Card
