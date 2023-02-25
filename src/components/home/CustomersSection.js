@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import classNames from "classnames";
 import { Grid, Typography } from "@mui/material";
 import { withStyles } from "@mui/styles";
 import calculateSpacing from "./calculateSpacing";
 import useWidth from "../../shared/functions/useWidth";
-import axios from "axios";
 import { useTranslation } from '../../shared/i18n/i18n'
+import customers from '../../customers.json';
 import '../../styles/main.css'
 
 const styles = (theme) => ({
@@ -47,18 +47,9 @@ function PricingSection(props) {
   const width = useWidth();
   const { t } = useTranslation();
 
-  const [customers, setCustomers] = useState([]);
-
-  useEffect(() => {
-    axios.get(`https://ta-vivo-customers.netlify.app/customers.json`)
-      .then((response) => {
-        setCustomers(response.data);
-      });
-  }, []);
-
   return (
     <div className="lg-p-top" style={{ backgroundColor: "#FFFFFF" }}>
-      <Typography variant="h4" align="center" style={{paddingBottom: '30px'}}>
+      <Typography variant="h3" align="center" className="lg-mg-bottom">
         {t('common.trustedByTeamsWorldwide')}
       </Typography>
       <div className={classNames("container-fluid", classes.containerFix)}>
@@ -79,7 +70,7 @@ function PricingSection(props) {
               key={element.name}
             >
             <div className="shine" style={{'justifyContent': 'center'}}>
-                <img className="customerlogo" style={{ width: 80,height:80}} src={element.logo} alt={element.name} />
+                <img className="customerlogo" style={{ maxWidth: 80, height:'100%'}} src={element.logo} alt={element.name} />
                 <p style={{'fontWeight': 'lighter'}}>{element.name}</p>
             </div>
             </Grid>
