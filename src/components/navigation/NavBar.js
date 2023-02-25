@@ -5,13 +5,10 @@ import {
   Toolbar,
   Button,
   Hidden,
-  IconButton,
 } from "@mui/material";
 import withStyles from "@mui/styles/withStyles";
-import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
 import MonitorHeartIcon from '@mui/icons-material/MonitorHeart';
-import NavigationDrawer from "../../shared/components/NavigationDrawer";
 import ZoomImage from "../../shared/components/ZoomImage";
 
 const styles = (theme) => ({
@@ -47,10 +44,6 @@ function NavBar(props) {
 
   const {
     classes,
-    handleMobileDrawerOpen,
-    handleMobileDrawerClose,
-    mobileDrawerOpen,
-    selectedTab,
   } = props;
   const menuItems = [
     {
@@ -71,6 +64,7 @@ function NavBar(props) {
     {
       link: "https://tavivo.do/auth/register",
       name: "Register for FREE",
+      shortName: "Register",
       icon: <MonitorHeartIcon className="text-white" />,
       isExternal: true,
       isButton: true
@@ -89,72 +83,70 @@ function NavBar(props) {
             />
           </div>
           <div>
-            <Hidden mdUp>
-              <IconButton
-                className={classes.menuButton}
-                onClick={handleMobileDrawerOpen}
-                aria-label="Open Navigation"
-                size="large"
-              >
-                <MenuIcon color="primary" />
-              </IconButton>
-            </Hidden>
-            <Hidden mdDown>
-              {menuItems.map((element, index) => {
-                if (element.link) {
-                  return (
-                    <span key={index}>
-                      {element.isExternal ?
-                        <Button
-                          key={index}
-                          color="secondary"
-                          size="large"
-                          variant={element.isButton ? "contained" : "text"}
-                          classes={{ text: classes.menuButtonText }}
-                          style={{ textTransform: 'initial' }}
-                          href={element.isExternal ? element.link : null}
-                        >
-                          {element.name}
-                        </Button>
-                        :
-                        <Button
-                          onClick={()=>handleOnClickInternalLink(element.link)}
-                          color="secondary"
-                          size="large"
-                          variant={element.isButton ? "contained" : "text"}
-                          classes={{ text: classes.menuButtonText }}
-                          style={{ textTransform: 'initial' }}
-                          href={element.isExternal ? element.link : null}
-                        >
-                          {element.name}
-                        </Button>
-                      }
-                    </span>
-                  );
-                }
+            {menuItems.map((element, index) => {
+              if (element.link) {
                 return (
-                  <Button
-                    color="secondary"
-                    size="large"
-                    onClick={element.onClick}
-                    classes={{ text: classes.menuButtonText }}
-                    key={element.name}
-                  >
-                    {element.name}
-                  </Button>
+                  <span key={index}>
+                    {element.isExternal ?
+                      <>
+                        <Hidden mdUp>
+                          <Button
+                            key={index}
+                            color="secondary"
+                            size="small"
+                            variant={element.isButton ? "contained" : "text"}
+                            classes={{ text: classes.menuButtonText }}
+                            style={{ textTransform: 'initial' }}
+                            href={element.isExternal ? element.link : null}
+                          >
+                            {element.shortName}
+                          </Button>
+                        </Hidden>
+                        <Hidden mdDown>
+                          <Button
+                            key={index}
+                            color="secondary"
+                            size="large"
+                            variant={element.isButton ? "contained" : "text"}
+                            classes={{ text: classes.menuButtonText }}
+                            style={{ textTransform: 'initial' }}
+                            href={element.isExternal ? element.link : null}
+                          >
+                            {element.name}
+                          </Button>
+                        </Hidden>
+                      </>
+                      :
+                      <Button
+                        onClick={() => handleOnClickInternalLink(element.link)}
+                        color="secondary"
+                        size="large"
+                        variant={element.isButton ? "contained" : "text"}
+                        classes={{ text: classes.menuButtonText }}
+                        style={{ textTransform: 'initial' }}
+                        href={element.isExternal ? element.link : null}
+                      >
+                        {element.name}
+                      </Button>
+                    }
+                  </span>
                 );
-              })}
-            </Hidden>
+              }
+              return (
+                <Button
+                  color="secondary"
+                  size="large"
+                  onClick={element.onClick}
+                  classes={{ text: classes.menuButtonText }}
+                  key={element.name}
+                >
+                  {element.name}
+                </Button>
+              );
+            })}
           </div>
         </Toolbar>
       </AppBar>
-      <NavigationDrawer
-        menuItems={menuItems}
-        anchor="right"
-        open={mobileDrawerOpen}
-        selectedItem={selectedTab}
-        onClose={handleMobileDrawerClose}
-      />
     </div>
   );
 }
