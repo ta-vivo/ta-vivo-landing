@@ -58,9 +58,11 @@ function PricingSection(props) {
 
   return (
     <div id="pricing" className="lg-p-top" style={{ backgroundColor: "#FFFFFF" }}>
-      <Typography variant="h3" align="center" className="lg-mg-bottom">
+      <Typography variant="h3" align="center">
         {t('titles.Pricing')}
       </Typography>
+      <p style={{ textAlign: 'center', fontStyle: 'italic' }} className="lg-mg-bottom">
+        <span style={{ color: 'tomato' }}>*</span>{t('common.cancelAnyTime')}</p>
       <div className={classNames("container-fluid", classes.containerFix)}>
         <Grid
           container
