@@ -61,7 +61,7 @@ function PricingSection(props) {
       <Typography variant="h3" align="center">
         {t('titles.Pricing')}
       </Typography>
-      <p style={{ textAlign: 'center', fontStyle: 'italic' }} className="lg-mg-bottom">
+      <p style={{ textAlign: 'center', fontStyle: 'italic', marginBottom: 50 }}>
         <span style={{ color: 'tomato' }}>*</span>{t('common.cancelAnyTime')}</p>
       <div className={classNames("container-fluid", classes.containerFix)}>
         <Grid

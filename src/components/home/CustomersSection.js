@@ -49,7 +49,7 @@ function PricingSection(props) {
 
   return (
     <div className="lg-p-top" style={{ backgroundColor: "#FFFFFF" }}>
-      <Typography variant="h3" align="center" className="lg-mg-bottom">
+      <Typography style={{ marginBottom: 50 }} variant="h3" align="center">
         {t('common.trustedByTeamsWorldwide')}
       </Typography>
       <div className={classNames("container-fluid", classes.containerFix)}>
@@ -57,7 +57,7 @@ function PricingSection(props) {
           container
           spacing={calculateSpacing(width, theme)}
           className={classes.gridContainer}
-          style={{textAlign: 'center'}}
+          style={{ textAlign: 'center' }}
         >
           {customers.map((element) => (
             <Grid
@@ -69,14 +69,14 @@ function PricingSection(props) {
               data-aos="zoom-in-up"
               key={element.name}
             >
-            <div className="shine" style={{'justifyContent': 'center'}}>
-                <img className="customerlogo" style={{ maxWidth: 80, height:'100%'}} src={element.logo} alt={element.name} />
-                <p style={{'fontWeight': 'lighter'}}>{element.name}</p>
-            </div>
+              <div className="shine" style={{ 'justifyContent': 'center' }}>
+                <img className="customerlogo" style={{ maxWidth: 80, height: '100%' }} src={element.logo} alt={element.name} />
+                <p style={{ 'fontWeight': 'lighter' }}>{element.name}</p>
+              </div>
             </Grid>
           ))}
-      </Grid>
-    </div>
+        </Grid>
+      </div>
     </div >
   );
 }

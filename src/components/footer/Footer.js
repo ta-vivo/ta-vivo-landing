@@ -126,7 +126,7 @@ function Footer(props) {
   const privacyPolicyLink = process.env.REACT_APP_PRIVACY_POLICY_URL;
 
   return (
-    <footer className="lg-p-top">
+    <footer style={{marginTop: 50}}>
       <WaveBorder
         upperColor="#FFFFFF"
         lowerColor={theme.palette.common.darkBlack}
