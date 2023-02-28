@@ -12,6 +12,7 @@ export default {
             "termsAndConditions": "Terms and Conditions",
             "privacyPolicy": "Privacy Policy",
             "retryOnCheckFail": "Retry on check fail",
+            "cancelAnyTime": "You're in control. Cancel anytime."
         },
         titles: {
             "Pricing": "Pricing",
