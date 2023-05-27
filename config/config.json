@@ -18,7 +18,7 @@
   "nav_button": {
     "enable": true,
     "label": "Get Started",
-    "link": "/contact"
+    "link": "https://tavivo.do"
   },
 
   "params": {
