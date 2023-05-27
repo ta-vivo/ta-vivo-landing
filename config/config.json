@@ -29,8 +29,8 @@
   },
 
   "metadata": {
-    "meta_author": "Themefisher",
+    "meta_author": "ta vivo",
     "meta_image": "",
-    "meta_description": "A SAAS template for nextjs"
+    "meta_description": "Monitor APIs or web services based on a configurable time interval and sent notifications if the service is down or not responding."
   }
 }

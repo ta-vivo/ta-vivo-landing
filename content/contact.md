@@ -4,9 +4,9 @@ layout: "contact"
 draft: false
 info: 
   title: Why you should contact us!
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit recusandae voluptates doloremque veniam temporibus porro culpa ipsa, nisi soluta minima saepe laboriosam debitis nesciunt.
+  description: Have questions, feedback, or need assistance? We're here to help! Reach out to us using the contact information provided below, or simply fill out the contact form and we'll get back to you as soon as possible.
   contacts: 
-    - "phone: +88 125 256 452"
-    - "Mail: [info@bigspring.com](mailto:info@bigspring.com)"
-    - "Address: 360 Main rd, Rio, Brazil"
+    - "Phone: +1 (809) 998-2632"
+    - "Mail: [contact@tavivo.do](mailto:contact@tavivo.do)"
+    - "Address: Villa Verde, Santiago, Dominican Republic"
 ---
