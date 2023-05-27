@@ -1,70 +1,45 @@
 {
-  "name": "react-saas-template",
+  "name": "bigspring-light-nextjs",
+  "description": "a nextjs and tailwindcss SAAS starter template",
   "version": "1.0.0",
   "private": true,
-  "homepage": "",
-  "description": "Template for building an SaaS/admin application using React + Material-UI",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next build && next export",
+    "lint": "next lint",
+    "start": "next start"
+  },
   "dependencies": {
-    "@emotion/react": "^11.9.0",
-    "@emotion/styled": "^11.9.3",
-    "@mui/icons-material": "^5.8.4",
-    "@mui/lab": "^5.0.0-alpha.84",
-    "@mui/material": "^5.4.4",
-    "@mui/styles": "^5.9.2",
-    "aos": "^2.3.4",
-    "axios": "^0.27.2",
-    "classnames": "^2.3.1",
-    "emoji-mart": "^5.2.0",
-    "i18next": "^21.8.14",
-    "js-cookie": "^3.0.1",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-cropper": "^2.1.8",
-    "react-dom": "^17.0.2",
-    "react-dropzone": "^14.1.2",
-    "react-i18next": "^11.18.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "^2.1.3",
-    "recharts": "^2.1.13",
-    "workbox-core": "^6.1.5",
-    "workbox-expiration": "^6.1.5",
-    "workbox-precaching": "^6.2.4",
-    "workbox-routing": "^6.2.4",
-    "workbox-strategies": "^6.5.3"
+    "github-slugger": "^2.0.0",
+    "gray-matter": "^4.0.3",
+    "marked": "^4.2.4",
+    "next": "13.0.6",
+    "next-mdx-remote": "^4.2.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-gtm-module": "^2.0.11",
+    "react-icons": "^4.7.1",
+    "react-lite-youtube-embed": "^2.3.52",
+    "rehype-slug": "^5.1.0",
+    "remark-gfm": "^3.0.1",
+    "swiper": "^8.4.5"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.0.0",
-    "@testing-library/user-event": "^14.3.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dunky11/react-saas-template.git"
-  },
-  "author": "dunky11",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/dunky11/react-saas-template/issues"
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/typography": "^0.5.8",
+    "autoprefixer": "^10.4.13",
+    "date-fns": "^2.29.3",
+    "date-fns-tz": "^1.3.7",
+    "eslint": "8.29.0",
+    "eslint-config-next": "13.0.6",
+    "jshint": "^2.13.6",
+    "postcss": "^8.4.19",
+    "prettier": "^2.8.1",
+    "prettier-plugin-tailwindcss": "^0.2.1",
+    "sass": "^1.56.2",
+    "tailwind-bootstrap-grid": "^5.0.1",
+    "tailwindcss": "^3.2.4"
   }
 }

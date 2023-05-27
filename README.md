@@ -1,66 +1,66 @@
-# Ta-vivo landing page
+<h1 align=center>Ta vivo landing page with Nextjs</h1> 
+
+<p align=center>
+  <a href="https://github.com/vercel/next.js/releases/tag/v13.0.6" alt="Contributors">
+    <img src="https://img.shields.io/static/v1?label=NEXTJS&message=13.0&color=000&logo=nextjs" />
+  </a>
 
 
-[<img src="/.github/gifs/showcase.gif">](https://reactsaastemplate.com "Go to demo website")
 
+![bigspring-light](https://demo.gethugothemes.com/thumbnails/bigspring-light.png)
 
-## Getting Started
+## 🔑Key Features
 
-### Prerequisites
+- 📄 9+ Pre-Designed Pages
+- ✨ Simple and Minimal
+- 📱 Fully Responsive
+- 🚀 Google Page Speed score 100! (Desktop)
+- 📊 Google Analytics support
+- 🗂️ Caching enabled
+- ✉️ Supports Contact Form
+- 🌍 SEO Friendly
 
-#### Node.js 12+ (versions below could work, but are not tested)
+## 📄 9+ Pre-Designed Pages
 
+- 🏠 Home Page
+- 📚 Blog Page
+- 📝 Blog Single Page
+- 📞 Contact Page
+- 📄 Features Page
+- ❓ FAQ Page
+- 💰 Pricing Page
+- 🔒 Privacy Policy Page
+- 🔒 Terms and Condition Page
 
-### Installing
+<!-- installation -->
+## ⚙️Installation
 
-1. Clone the repository
+After downloading the template, you have some prerequisites to install. Then you can run it on your localhost. You can view the package.json file to see which scripts are included.
 
-2. Install dependencies, this can take a minute
+### 🔧Install prerequisites (once for a machine)
 
-   ```bash
-   npm install
-   ```
-3. Start the local server
+* **Node Installation:** [Install node js](https://nodejs.org/en/download/) [Recommended LTS version]
 
-   ```bash
-   npm start
-   ```
+### 🖥️Local setup
 
-Your browser should now open and show the app. Otherwise open http://localhost:3000/ in your browser. Editing files will automatically refresh the page.
-
-### What to do next?
-
-If you are new to React, you should watch a [basic React tutorial](https://www.youtube.com/results?search_query=react+tutorial) first.
-
-If you know React, then most of the information you need is in the [Material-UI documentation](https://material-ui.com/getting-started/usage/).
-
-You can go into [src/theme.js](/src/theme.js) and change the primary and secondary color codes at the top of the script to the values you like and some magic will happen.
-
-## Deployment
-
-If you are satisfied with the state of your website you can run:
+* Install dependencies
 
 ```
-npm run build 
+yarn
 ```
 
-It will create a folder named build with your compiled project inside. After that copy its content into your webroot and you are ready to go.
+* Run locally
 
-## Built With
+```
+yarn dev
+```
 
-* [Create-React-App](https://github.com/facebook/create-react-app) - Used to bootstrap the development
-* [Material-UI](https://github.com/mui-org/material-ui) - Material Design components
-* [React-Router](https://github.com/ReactTraining/react-router) - Routing of the app
-* [Pace](https://github.com/HubSpot/pace) - Loading bar at the top
-* [Emoji-Mart](https://github.com/missive/emoji-mart) - Picker for the emojis
-* [React-Dropzone](https://github.com/react-dropzone/react-dropzone) - File drop component for uploads
-* [Recharts](https://github.com/recharts/recharts) - Charting library I used for the statistics
-* [Aos](https://github.com/michalsnik/aos) - Animations based on viewport
-* [React-Cropper](https://github.com/roadmanfong/react-cropper) - Cropper for the image uploads
+After that, it will open up a preview of the template in your default browser, watch for changes to source files, and live-reload the browser when changes are saved.
 
-## Contribute
-Show your support by ⭐ the project. Pull requests are always welcome.
+## 🔨Production Build
 
-## License
+After finishing all the customization, you can create a production build by running this command.
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/dunky11/react-saas-template/blob/master/LICENSE) file for details.
+```
+yarn build
+```
