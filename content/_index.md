@@ -78,7 +78,7 @@ services:
 workflow: 
   title: "Trusted by teams worldwide"
   customers:
-    - name: Anncar Equipment Part
+    - name: Anncar Equipment Parts
       logo: "/images/customers/anncar-logo.webp"
 
     - name: Bohios
