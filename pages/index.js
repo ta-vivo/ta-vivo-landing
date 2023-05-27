@@ -109,9 +109,8 @@ const Home = ({ frontmatter }) => {
 
                 {/* Content */}
                 <div
-                  className={`service-content mt-5 md:mt-0 ${
-                    !isOdd && "md:order-1"
-                  }`}
+                  className={`service-content mt-5 md:mt-0 ${!isOdd && "md:order-1"
+                    }`}
                 >
                   <h2 className="font-bold leading-[40px]">{service?.title}</h2>
                   <p className="mt-4 mb-2">{service?.content}</p>
@@ -147,12 +146,19 @@ const Home = ({ frontmatter }) => {
           )}
           {markdownify(workflow.description, "p", "mt-3")}
         </div>
-        <Image
-          src={workflow.image}
-          alt="workflow image"
-          width={1920}
-          height={296}
-        />
+        <div className="grid grid-cols-4 gap-4">
+          {workflow.customers.map(customer => (
+            <div key={customer.name} className="flex flex-col items-center">
+              <Image
+                src={customer.logo}
+                alt={customer.name}
+                width={100}
+                height={100}
+              />
+              <span className="mt-2">{customer.name}</span>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* Cta */}

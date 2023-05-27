@@ -76,9 +76,19 @@ services:
 
 # workflow
 workflow: 
-  title: "Experience the best workflow with us"
-  image: "/images/banner.svg"
-  description: ""
+  title: "Trusted by teams worldwide"
+  customers:
+    - name: Anncar Equipment Part
+      logo: "/images/customers/anncar-logo.webp"
+
+    - name: Bohios
+      logo: "/images/customers/bohios-logo.svg"
+
+    - name: AR Soft
+      logo: "/images/customers/ar-soft-logo.png"
+
+    - name: Wilbby
+      logo: "/images/customers/wilbby-logo.svg"
 
 # call_to_action
 call_to_action:
