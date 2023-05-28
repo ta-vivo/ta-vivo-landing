@@ -33,5 +33,6 @@ call_to_action:
   button:
     enable: true
     label: "Start Now. It's Free!"
+    sublabel: "No credit card required!"
     link: "https://tavivo.do"
 ---
