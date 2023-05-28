@@ -5,9 +5,10 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['tavivo.s3.amazonaws.com'],
+    unoptimized: true
   },
-  target: 'serverless'
+  output: 'export',
+  distDir: 'dist'
 };
 
 module.exports = nextConfig;
