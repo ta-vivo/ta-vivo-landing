@@ -28,7 +28,7 @@ integrations:
 
 call_to_action:
   title: Ready to get started?
-  content: 
+  content: Start monitoring your web services today and get 10 check and 10 integrations for free!
   image: '/images/cta.svg'
   button:
     enable: true
