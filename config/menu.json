@@ -5,6 +5,10 @@
       "url": "/"
     },
     {
+      "name": "Integrations",
+      "url": "/integrations"
+    },
+    {
       "name": "Pricing",
       "url": "/pricing"
     },
