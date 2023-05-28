@@ -32,14 +32,14 @@ feature:
 
 # services
 services:
-  - title: "It is the most advanced digital marketing and it company."
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat. consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat."
+  - title: Status pages, view uptime, downtime and the response times
+    content: With our status pages you can view the uptime, downtime and the response times of all your services. You can also view the status of your services from multiple locations around the world.
     images:
-      - "/images/service-slide-1.png"
-      - "/images/service-slide-2.png"
-      - "/images/service-slide-3.png"
+      - "/images/statusPages/status-page.png"
+      - "/images/statusPages/status-page-2.png"
+      - "/images/statusPages/status-page-3.png"
     button:
-      enable: true
+      enable: false
       label: Check it out
       link: /contact
 
