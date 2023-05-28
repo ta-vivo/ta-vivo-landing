@@ -41,6 +41,15 @@ services:
   - title: "Easy setup"
     content: "Providing a straightforward and user-friendly setup process, allowing you to quickly configure and start monitoring your web services. The app offers a simple interface and step-by-step instructions, making it easy for anyone to get started."
     images:
+      - "https://tavivo.s3.amazonaws.com/gif/create-check.gif"
+    button:
+      enable: false
+      label: Check it out
+      link: /contact
+
+  - title: Status pages, view uptime, downtime and the response times
+    content: With our status pages you can view the uptime, downtime and the response times of all your services. You can also view the status of your services from multiple locations around the world.
+    images:
       - "/images/statusPages/status-page.png"
       - "/images/statusPages/status-page-2.png"
     button:
