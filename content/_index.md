@@ -93,10 +93,11 @@ workflow:
 # call_to_action
 call_to_action:
   title: Ready to get started?
-  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur.
+  content: 
   image: '/images/cta.svg'
   button:
     enable: true
-    label: "Get Started"
+    label: "Start Now. It's Free!"
+    sublabel: "No credit card required!"
     link: "https://tavivo.do"
 ---
