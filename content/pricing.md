@@ -5,42 +5,44 @@ draft: false
 plans:
 - title: Basic Plan
   subtitle: Best For Small Individuals
-  price: 49
+  price: 0
   type: month
   features:
-    - Express Service
-    - Customs Clearance
-    - Time-Critical Services
+    - 10 Checks
+    - 200 Log History
+    - 10 Integrations
   button:
-    label: Get started for free
-    link: "/contact"
+    label: Register for FREE
+    link: "https://tavivo.do/"
 
 - title: Professional Plan
   subtitle: Best For Professionals
-  price: 69
+  price: 3
   type: month
   recommended: true
   features:
-    - Express Service
-    - Customs Clearance
-    - Time-Critical Services
-    - Cloud Service
-    - Best Dashboard
+    - 25 Checks
+    - 1,000 Log History
+    - 20 Integrations
+    - 1 minute Time Interval
+    - Retry on check fail
   button:
-    label: Get started
-    link: "/contact"
+    label: Subscribe now
+    link: "https://tavivo.do/"
 
-- title: Business Plan
+- title: Enterprise Plan
   subtitle: Best For Large Individuals
-  price: 99
+  price: 10
   type: month
   features:
-    - Express Service
-    - Customs Clearance
-    - Time-Critical Services
+    - 120 Checks
+    - 5,000 Log History
+    - 50 Integrations
+    - 30 seconds Time Interval
+    - Retry on check fail
   button:
-    label: Get started
-    link: "/contact"
+    label: Subscribe now
+    link: "https://tavivo.do/"
 
 call_to_action:
   title: Need a larger plan?

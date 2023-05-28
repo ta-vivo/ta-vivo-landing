@@ -2,7 +2,7 @@
 banner:
   title: Monitoring API's or web services based on a configurable time interval
   content: Get notifications via Discord, Email, Slack, Telegram or WhatsApp.
-  image: /images/banner-art.svg
+  image: /images/banner/logs.png
   button:
     label: "Contact Us"
     link: "/contact"
@@ -35,11 +35,11 @@ services:
   - title: "Easy setup"
     content: "Providing a straightforward and user-friendly setup process, allowing you to quickly configure and start monitoring your web services. The app offers a simple interface and step-by-step instructions, making it easy for anyone to get started."
     images:
-      - "/images/service-slide-1.png"
-      - "/images/service-slide-2.png"
-      - "/images/service-slide-3.png"
+      - "/images/statusPages/status-page.png"
+      - "/images/statusPages/status-page-2.png"
+      - "/images/statusPages/status-page-3.png"
     button:
-      enable: true
+      enable: false
       label: Check it out
       link: /contact
 
@@ -65,17 +65,28 @@ services:
 
 # workflow
 workflow: 
-  title: "Experience the best workflow with us"
-  image: "/images/banner.svg"
-  description: ""
+  title: "Trusted by teams worldwide"
+  customers:
+    - name: Anncar Equipment Parts
+      logo: "/images/customers/anncar-logo.webp"
+
+    - name: Bohios
+      logo: "/images/customers/bohios-logo.svg"
+
+    - name: AR Soft
+      logo: "/images/customers/ar-soft-logo.png"
+
+    - name: Wilbby
+      logo: "/images/customers/wilbby-logo.svg"
 
 # call_to_action
 call_to_action:
   title: Ready to get started?
-  content: Start been one step ahead of your customers.
+  content: 
   image: '/images/cta.svg'
   button:
     enable: true
-    label: "Contact Us"
-    link: "/contact"
+    label: "Start Now. It's Free!"
+    sublabel: "No credit card required!"
+    link: "https://tavivo.do"
 ---

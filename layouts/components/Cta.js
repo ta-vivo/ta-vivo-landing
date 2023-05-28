@@ -20,6 +20,7 @@ function Cta({ cta }) {
             <h2>{cta?.title}</h2>
             <p className="mt-6">{markdownify(cta?.content)}</p>
             {cta.button.enable && (
+              <>
               <Link
                 className="btn btn-primary mt-4"
                 href={cta.button.link}
@@ -27,6 +28,12 @@ function Cta({ cta }) {
               >
                 {cta.button.label}
               </Link>
+                {cta.button.sublabel && (
+                  <span className="mt-2 text-sm text-gray-500 block ml-7">
+                    {cta.button.sublabel}
+                  </span>
+                )}
+              </>
             )}
           </div>
         </div>
