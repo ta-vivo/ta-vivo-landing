@@ -31,14 +31,14 @@ const Home = ({ frontmatter }) => {
                   {banner.button.label}
                 </Link>
               )}
-              <Image
-                className="mx-auto mt-12"
-                src={banner.image}
-                width={500}
-                height={390}
-                alt="banner image"
-                priority
-              />
+                <Image
+                  className="mx-auto mt-12"
+                  src={banner.image}
+                  width={500}
+                  height={390}
+                  alt="banner image"
+                  priority
+                />
             </div>
           </div>
         </div>
