@@ -38,8 +38,8 @@ feature:
 
 # services
 services:
-  - title: Status pages, view uptime, downtime and the response times
-    content: With our status pages you can view the uptime, downtime and the response times of all your services. You can also view the status of your services from multiple locations around the world.
+  - title: "Easy setup"
+    content: "Providing a straightforward and user-friendly setup process, allowing you to quickly configure and start monitoring your web services. The app offers a simple interface and step-by-step instructions, making it easy for anyone to get started."
     images:
       - "/images/statusPages/status-page.png"
       - "/images/statusPages/status-page-2.png"
@@ -48,8 +48,8 @@ services:
       label: Check it out
       link: /contact
 
-  - title: "It is a privately owned Information and cyber security company"
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat. consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat."
+  - title: "Keep aware with multiple channels notifications"
+    content: "Using various contact channels to keep you informed about the status of your web services. You can receive notifications via Discord, email, Slack, Telegram, and Whatsapp. This flexibility allows you to choose the communication channel that best suits your needs or integrate with your existing workflow."
     images: 
       - "/images/service-slide-1.png"
     button:
@@ -57,19 +57,8 @@ services:
       label: Check it out
       link: /contact
   
-  - title: "It’s a team of experienced and skilled people with distributions"
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat. consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat."
-    images:
-      - "/images/service-slide-1.png"
-      - "/images/service-slide-2.png"
-      - "/images/service-slide-3.png"
-    button:
-      enable: true
-      label: Check it out
-      link: /contact
-
-  - title: "A company standing different from others"
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat. consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat."
+  - title: "Insights of your app deployments"
+    content: "Mantaining a detailed history of the checks performed on your web services. It records each check's result, whether it succeeded or failed, along with the timestamp. This check history provides valuable insights into the availability and performance of your services over time."
     images:
       - "/images/service-slide-1.png"
       - "/images/service-slide-2.png"
@@ -106,3 +95,4 @@ call_to_action:
     sublabel: "No credit card required!"
     link: "https://tavivo.do"
 ---
+	
