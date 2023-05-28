@@ -2,7 +2,7 @@
 banner:
   title: Monitoring API's or web services based on a configurable time interval
   content: Get notifications via Discord, Email, Slack, Telegram or WhatsApp.
-  image: /images/banner.png
+  image: /images/banner/logs.png
   button:
     label: "Contact Us"
     link: "/contact"
