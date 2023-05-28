@@ -31,14 +31,14 @@ const Home = ({ frontmatter }) => {
                   {banner.button.label}
                 </Link>
               )}
-                <Image
-                  className="mx-auto mt-12"
-                  src={banner.image}
-                  width={500}
-                  height={390}
-                  alt="banner image"
-                  priority
-                />
+              <Image
+                className="mx-auto mt-12"
+                src={banner.image}
+                width={500}
+                height={390}
+                alt="banner image"
+                priority
+              />
             </div>
           </div>
         </div>
@@ -101,7 +101,7 @@ const Home = ({ frontmatter }) => {
                     {/* Slides */}
                     {service?.images.map((slide, index) => (
                       <SwiperSlide key={index}>
-                        <Image src={slide} alt="" width={600} height={500} />
+                        <Image className="rounded px-4 py-4 bg-slate-100" src={slide} alt="" width={500} height={300} />
                       </SwiperSlide>
                     ))}
                   </Swiper>

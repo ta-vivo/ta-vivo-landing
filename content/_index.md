@@ -37,7 +37,6 @@ services:
     images:
       - "/images/statusPages/status-page.png"
       - "/images/statusPages/status-page-2.png"
-      - "/images/statusPages/status-page-3.png"
     button:
       enable: false
       label: Check it out
