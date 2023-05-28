@@ -31,14 +31,34 @@ const Home = ({ frontmatter }) => {
                   {banner.button.label}
                 </Link>
               )}
-              <Image
-                className="mx-auto mt-12"
-                src={banner.image}
-                width={500}
-                height={390}
-                alt="banner image"
-                priority
-              />
+              <div className="relative">
+                <div className="absolute space-x-4 right-56 -top-16">
+                  {banner.integrationImages.map((image, index) => (
+                    <div
+                      key={index}
+                      className="animate-bounce inline-block"
+                      style={{ animation: `bounce 8s ${index * 0.5}s infinite`}}
+                    >
+                      <Image
+                        src={image}
+                        style={{ paddingTop: `${(index+ 2) * 10}px`}}
+                        width={40}
+                        height={40}
+                        alt={`integration image ${index}`}
+                      />
+                    </div>
+                  ))}
+                </div>
+                <Image
+                  className="mx-auto mt-12"
+                  src={banner.image}
+                  width={500}
+                  height={390}
+                  alt="banner image"
+                  priority
+                />
+              </div>
+
             </div>
           </div>
         </div>
