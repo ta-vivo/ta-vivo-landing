@@ -32,21 +32,17 @@ const Home = ({ frontmatter }) => {
                 </Link>
               )}
               <div className="relative">
-                <div className="absolute space-x-4 right-56 -top-16">
+                <div className="absolute w-full space-x-2 md:space-x-4 -right-16 -top-16">
                   {banner.integrationImages.map((image, index) => (
-                    <div
+                    <Image
                       key={index}
                       className="animate-bounce inline-block"
-                      style={{ animation: `bounce 8s ${index * 0.5}s infinite`}}
-                    >
-                      <Image
-                        src={image}
-                        style={{ paddingTop: `${(index+ 2) * 10}px`}}
-                        width={40}
-                        height={40}
-                        alt={`integration image ${index}`}
-                      />
-                    </div>
+                      style={{ animation: `bounce 8s ${index * 0.5}s infinite`, paddingTop: `${(index + 2) * 10}px` }}
+                      src={image}
+                      width={40}
+                      height={40}
+                      alt={`integration image ${index}`}
+                    />
                   ))}
                 </div>
                 <Image
