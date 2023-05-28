@@ -34,7 +34,7 @@ const Home = ({ frontmatter }) => {
               <Image
                 className="mx-auto mt-12"
                 src={banner.image}
-                width={750}
+                width={500}
                 height={390}
                 alt="banner image"
                 priority
