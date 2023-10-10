@@ -76,11 +76,14 @@ workflow:
     - name: Anncar Equipment Parts
       logo: "/images/customers/anncar-logo.webp"
 
+    - name: AR Soft
+      logo: "/images/customers/ar-soft-logo.png"
+
     - name: Bohios
       logo: "/images/customers/bohios-logo.svg"
 
-    - name: AR Soft
-      logo: "/images/customers/ar-soft-logo.png"
+    - name: MUTUS
+      logo: "/images/customers/mutus-logo.png"
 
     - name: Wilbby
       logo: "/images/customers/wilbby-logo.svg"
