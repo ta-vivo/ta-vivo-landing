@@ -97,6 +97,6 @@ call_to_action:
     enable: true
     label: "Start Now. It's Free!"
     sublabel: "No credit card required!"
-    link: "https://tavivo.do"
+    link: "https://app-tavivo.albert.do"
 ---
 	

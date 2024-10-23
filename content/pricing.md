@@ -13,7 +13,7 @@ plans:
     - 10 Integrations
   button:
     label: Register for FREE
-    link: "https://tavivo.do/"
+    link: "https://app-tavivo.albert.do"
 
 - title: Professional Plan
   subtitle: Best For Professionals
@@ -28,7 +28,7 @@ plans:
     - Retry on check fail
   button:
     label: Subscribe now
-    link: "https://tavivo.do/"
+    link: "https://app-tavivo.albert.do"
 
 - title: Enterprise Plan
   subtitle: Best For Large Individuals
@@ -42,7 +42,7 @@ plans:
     - Retry on check fail
   button:
     label: Subscribe now
-    link: "https://tavivo.do/"
+    link: "https://app-tavivo.albert.do"
 
 call_to_action:
   title: Need a larger plan?
